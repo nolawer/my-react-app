@@ -71,7 +71,6 @@ const styles = StyleSheet.create({
     loadingBar: {
         backgroundColor: 'orange',    // 배경색 파랑
         height: 10,                 // 높이 10
-        width: '50%',               // 초기 너비 50% (나중에 애니메이션으로 변경됨)
     },
 });
 
