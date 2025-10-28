@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+build/
+dist/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git backup folders
+.git.backup/
+
