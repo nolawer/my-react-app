@@ -3,6 +3,7 @@ import { Stack } from "expo-router";
 export default function Layout() {
     return (
         <Stack
+        // initialRouteName="tabs"
         screenOptions={{
             headerShown: false,
           headerStyle: {
@@ -14,8 +15,8 @@ export default function Layout() {
           },
           headerTitleAlign: 'center',
         }}>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        {/* <Stack.Screen name="browser" options={{ headerShown: true, title: 'Browser' }} /> */}
+        <Stack.Screen name="tabs" options={{ headerShown: false }} />
+        <Stack.Screen name="browser" options={{ headerShown: true, title: 'Browser' }} />
       </Stack>
     );
   }

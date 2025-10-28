@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Platform, StatusBar } from 'react-native';
 import WebView from 'react-native-webview';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { router } from 'expo-router';
 
 const styles = StyleSheet.create({
     safeArea: { 
@@ -21,16 +22,17 @@ const HomeScreen = () => {
             showsVerticalScrollIndicator={false}
             showsHorizontalScrollIndicator={false}
             onShouldStartLoadWithRequest={(request) => {
-                console.log(request.url);
+                // console.log(request.url);
                 if (
                   request.url.startsWith('https://m.naver.com/')
                 ) {
-                    console.log('true', request.url);
+                    // console.log('true', request.url);
                   return true;
                 }
 
                 if (request.url != null && request.url.startsWith('https://')){
-                    console.log('false', request.url);
+                    // console.log('false', request.url);
+                    router.push({ pathname: '/browser', params: { initialUrl: request.url } });
                     return false;
                 }
                 return true;
